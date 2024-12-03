@@ -74,4 +74,18 @@ echo       %%~nF
 echo LSM:Register("statusbar", "%%~nF", [[Interface\Addons\%folderName%\statusbar\%%~nxF]]^) >> ..\%folderName%\MyMedia.lua
 )
 
+set "currentDir=%CD%"
+for %%I in ("%currentDir%") do set "folderName=%%~nxI"
+
+set "parentDir=%~dp0.."
+set "zipFile=%currentDir%\%folderName%.zip"
+
+:: Delete existing zip file if it exists
+if exist "%zipFile%" del "%zipFile%"
+
+:: Create the zip file from the parent directory, including the folder named %folderName%
+powershell -command "Compress-Archive -Path '%parentDir%\%folderName%' -DestinationPath '%zipFile%' -Force"
+
+echo Zip file created at %zipFile%
+
 pause

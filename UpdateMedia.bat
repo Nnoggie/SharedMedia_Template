@@ -10,9 +10,25 @@ if exist "%tocFile%" (
   for /F "tokens=2 delims=:" %%A in ('findstr /B /C:"## X-Wago-ID:" "%tocFile%"') do set "wagoID=%%A"
 ) else (
   set /P "wagoID=Enter Wago Project ID: "
+  if not exist "..\%folderName%\background" mkdir "..\%folderName%\background"
+  if not exist "..\%folderName%\border" mkdir "..\%folderName%\border"
+  if not exist "..\%folderName%\font" mkdir "..\%folderName%\font"
+  if not exist "..\%folderName%\sound" mkdir "..\%folderName%\sound"
+  if not exist "..\%folderName%\statusbar" mkdir "..\%folderName%\statusbar"
+
+  echo ## Interface: 11503, 40400, 110000, 110002 > "%tocFile%"
+  echo ## Title: %folderName% >> "%tocFile%"
+  if not "%wagoID%"=="" echo ## X-Wago-ID: %wagoID% >> "%tocFile%"
+  echo MyMedia.lua >> "%tocFile%"
+  echo libs\LibStub\LibStub.lua >> "%tocFile%"
+  echo libs\CallbackHandler-1.0\CallbackHandler-1.0.lua >> "%tocFile%"
+  echo libs\LibSharedMedia-3.0\LibSharedMedia-3.0.lua >> "%tocFile%"
+
+  echo AddOn created. Add your media files to the appropriate folders.
+  echo Run this script again to register the media files and create a zip file.
+  goto :endOfScript
 )
 
-echo Creating the TOC...
 echo ## Interface: 11503, 40400, 110000, 110002 > "%tocFile%"
 echo ## Title: %folderName% >> "%tocFile%"
 if not "%wagoID%"=="" echo ## X-Wago-ID: %wagoID% >> "%tocFile%"
@@ -21,10 +37,10 @@ echo libs\LibStub\LibStub.lua >> "%tocFile%"
 echo libs\CallbackHandler-1.0\CallbackHandler-1.0.lua >> "%tocFile%"
 echo libs\LibSharedMedia-3.0\LibSharedMedia-3.0.lua >> "%tocFile%"
 
-echo Creating the file...
+echo "%tocFile%"
+
 echo local LSM = LibStub("LibSharedMedia-3.0") > ..\%folderName%\MyMedia.lua
 
-if not exist "..\%folderName%\background" mkdir "..\%folderName%\background"
 echo    BACKGROUND
 echo.>> ..\%folderName%\MyMedia.lua
 echo -- ----- >> ..\%folderName%\MyMedia.lua
@@ -35,7 +51,6 @@ echo       %%~nF
 echo LSM:Register("background", "%%~nF", [[Interface\Addons\%folderName%\background\%%~nxF]]^) >> ..\%folderName%\MyMedia.lua
 )
 
-if not exist "..\%folderName%\border" mkdir "..\%folderName%\border"
 echo    BORDER
 echo.>> ..\%folderName%\MyMedia.lua
 echo -- ----- >> ..\%folderName%\MyMedia.lua
@@ -46,7 +61,6 @@ echo       %%~nF
 echo LSM:Register("border", "%%~nF", [[Interface\Addons\%folderName%\border\%%~nxF]]^) >> ..\%folderName%\MyMedia.lua
 )
 
-if not exist "..\%folderName%\font" mkdir "..\%folderName%\font"
 echo    FONT
 echo.>> ..\%folderName%\MyMedia.lua
 echo -- ----->> ..\%folderName%\MyMedia.lua
@@ -57,7 +71,6 @@ echo       %%~nF
 echo LSM:Register("font", "%%~nF", [[Interface\Addons\%folderName%\font\%%~nxF]]^) >> ..\%folderName%\MyMedia.lua
 )
 
-if not exist "..\%folderName%\sound" mkdir "..\%folderName%\sound"
 echo    SOUND
 echo.>> ..\%folderName%\MyMedia.lua
 echo -- ----->> ..\%folderName%\MyMedia.lua
@@ -68,7 +81,6 @@ echo       %%~nF
 echo LSM:Register("sound", "%%~nF", [[Interface\Addons\%folderName%\sound\%%~nxF]]^) >> ..\%folderName%\MyMedia.lua
 )
 
-if not exist "..\%folderName%\statusbar" mkdir "..\%folderName%\statusbar"
 echo    STATUSBAR
 echo.>> ..\%folderName%\MyMedia.lua
 echo -- ----->> ..\%folderName%\MyMedia.lua
@@ -89,4 +101,5 @@ if exist "%zipFile%" del "%zipFile%"
 powershell -command "Compress-Archive -Path '%parentDir%\%folderName%\MyMedia.lua', '%parentDir%\%folderName%\%folderName%.toc', '%parentDir%\%folderName%\background\', '%parentDir%\%folderName%\border\', '%parentDir%\%folderName%\font\', '%parentDir%\%folderName%\sound\', '%parentDir%\%folderName%\statusbar\' -DestinationPath '%zipFile%' -Force"
 echo Zip file created at %zipFile%
 
+:endOfScript
 pause

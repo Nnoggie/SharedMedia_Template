@@ -16,7 +16,7 @@ if exist "%tocFile%" (
   if not exist "..\%folderName%\sound" mkdir "..\%folderName%\sound"
   if not exist "..\%folderName%\statusbar" mkdir "..\%folderName%\statusbar"
 
-  echo ## Interface: 11503, 40400, 110000, 110002 > "%tocFile%"
+  echo ## Interface: 11505, 40401, 110005 > "%tocFile%"
   echo ## Title: %folderName% >> "%tocFile%"
   if not "%wagoID%"=="" echo ## X-Wago-ID: %wagoID% >> "%tocFile%"
   echo MyMedia.lua >> "%tocFile%"
@@ -29,7 +29,7 @@ if exist "%tocFile%" (
   goto :endOfScript
 )
 
-echo ## Interface: 11503, 40400, 110000, 110002 > "%tocFile%"
+echo ## Interface: 11505, 40401, 110005 > "%tocFile%"
 echo ## Title: %folderName% >> "%tocFile%"
 if not "%wagoID%"=="" echo ## X-Wago-ID: %wagoID% >> "%tocFile%"
 echo MyMedia.lua >> "%tocFile%"

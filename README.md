@@ -1,6 +1,6 @@
 # SharedMedia_Template
 
-This project is a template for creating custom media for WeakAuras and other AddOns that use LibSharedMedia-3.0. The project is set up to create a custom media AddOn that can be uploaded to [Wago Addons](https://addons.wago.io/).
+This project is a template and tutorial for creating a custom media Addon for WeakAuras and other AddOns that use [LibSharedMedia-3.0](https://www.curseforge.com/wow/addons/libsharedmedia-3-0). The project is set up to create a custom media AddOn that can be uploaded to [Wago Addons](https://addons.wago.io/) and be directly embedded in [Wago UI Packs](https://uipacks.wago.io/)
 
 # Instructions
 
@@ -30,4 +30,4 @@ This project is a template for creating custom media for WeakAuras and other Add
     ![Example Image](https://i.imgur.com/dnWqihM.png)
 11. Upload the zip file that the script created for you and fill in the form as shown in the screenshot below. Label the release as "1.0" and click "Create Version".
     ![Example Image](https://i.imgur.com/PqnLOF2.png)
-12. You're done! You can now share the link to your custom media AddOn with others or embed it in your UI Pack via the WagoUI Creator Addon. If you want to update the media, just add more media to the folders and run the bat file again and upload a new release with a new version number like "1.1" and a descriptive changelog.
+12. You're done! You can now share the link to your custom media AddOn with others or embed it in your UI Pack via the WagoUI Creator Addon. If you want to update the media, just add more media to the folders and run the bat file again and upload a new release with a new version number like "1.1" and a descriptive changelog. Make sure to only upload the generated zip file and not the entire folder.

@@ -1,12 +1,11 @@
 # Instructions
 
-1. Download this project [here](https://github.com/Nnoggie/SharedMedia_ExampleName/archive/refs/heads/main.zip)
-2. Drag the folder SharedMedia_ExampleName-main to your World of Warcraft/Interface/AddOns folder
-3. Rename the folder SharedMedia_ExampleName-main to whatever you want your custom media AddOn to be called
-4. Add media to the corresponding folders
-5. Run UpdateMedia.bat to create / update the AddOn files
-6. Create a project on Wago Addons and upload your AddOn
-
-- issue: X-WAGO-ID, have them enter the ID in bat the first time the toc is created?
-- read the toc file and get the ID from there afterwards
-- step 6 should probably be the first one
+1. Create a new Wago Addon project at [https://addons.wago.io/developers](https://addons.wago.io/developers). We need the Wago ID of the project for the next steps.
+   ![Example Image](https://i.imgur.com/izbd9Uu.png)
+2. Download this project [here](https://github.com/Nnoggie/SharedMedia_ExampleName/archive/refs/heads/main.zip)
+3. Open the zip and drag the folder SharedMedia_ExampleName-main to your World of Warcraft/Interface/AddOns folder
+4. Rename the folder SharedMedia_ExampleName-main to whatever you want your custom media AddOn to be called. Examples: SharedMedia_NnoggieUI, NnoggieUI_Media etc.
+5. Run the file UpdateMedia.bat in the folder you just renamed. This will create the necessary folders and files for your custom media. Follow the steps in the console window. When asked for the Wago ID, enter the ID you got in step 1.
+6. Add your custom media to the folders created in step 5. You can add images, sounds, fonts etc. The media will be available in WeakAuras and other AddOns that use LibSharedMedia-3.0.
+7. Run UpdateMedia.bat again to register the files and automatically create a zip file that you can upload to Wago Addons.
+8. Upload the zip file to your Wago Addon project.

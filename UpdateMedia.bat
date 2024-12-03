@@ -3,14 +3,24 @@
 set "currentDir=%CD%"
 for %%I in ("%currentDir%") do set "folderName=%%~nxI"
 
+set "tocFile=..\%folderName%\%folderName%.toc"
+set "wagoID="
+
+if exist "%tocFile%" (
+  for /F "tokens=2 delims=:" %%A in ('findstr /B /C:"## X-Wago-ID:" "%tocFile%"') do set "wagoID=%%A"
+) else (
+  set /P "wagoID=Enter Wago Project ID: "
+)
+
 echo Creating the TOC...
-echo ## Interface: 11503, 40400, 110000, 110002 > ..\%folderName%\%folderName%.toc
-echo ## Title: %folderName% >> ..\%folderName%\%folderName%.toc
-echo MyMedia.lua >> ..\%folderName%\%folderName%.toc
-echo libs\LibStub\LibStub.lua >> ..\%folderName%\%folderName%.toc
-echo libs\CallbackHandler-1.0\CallbackHandler-1.0.lua >> ..\%folderName%\%folderName%.toc
-echo libs\LibSharedMedia-3.0\LibSharedMedia-3.0.lua >> ..\%folderName%\%folderName%.toc
-embeds.xml
+echo ## Interface: 11503, 40400, 110000, 110002 > "%tocFile%"
+echo ## Title: %folderName% >> "%tocFile%"
+if not "%wagoID%"=="" echo ## X-Wago-ID: %wagoID% >> "%tocFile%"
+echo MyMedia.lua >> "%tocFile%"
+echo libs\LibStub\LibStub.lua >> "%tocFile%"
+echo libs\CallbackHandler-1.0\CallbackHandler-1.0.lua >> "%tocFile%"
+echo libs\LibSharedMedia-3.0\LibSharedMedia-3.0.lua >> "%tocFile%"
+
 echo Creating the file...
 echo local LSM = LibStub("LibSharedMedia-3.0") > ..\%folderName%\MyMedia.lua
 

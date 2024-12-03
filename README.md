@@ -12,7 +12,7 @@ This project is a template for creating custom media for WeakAuras and other Add
    3. Click on "Custom Addon Creation" and fill in the form as shown in the screenshot below and click "Create Addon". Pick a name good name for your Addon such as "SharedMedia_YourNameUI" or "YourNameUI_Media" etc. We will use the same name in a later step.
       ![Example Image](https://i.imgur.com/HNy20WY.png)
    4. Take note of the Wago ID of the project. We will use this ID in a later step.
-      ![Example Image](https://i.imgur.com/izbd9Uu.png)
+      ![Example Image](https://i.imgur.com/KxpSRbU.png)
 
 2. Download the SharedMedia Template (this repository) [here](https://github.com/Nnoggie/SharedMedia_Template/archive/refs/heads/main.zip)
 3. Open the zip and drag the folder SharedMedia_Template-main to your World of Warcraft/Interface/AddOns folder
@@ -29,5 +29,5 @@ This project is a template for creating custom media for WeakAuras and other Add
 10. The Script has also automatically created a zip file of the Addon for you to distribute. Navigate back to the Wago Addons project you created in step 1 and click "New Release"
     ![Example Image](https://i.imgur.com/dnWqihM.png)
 11. Upload the zip file that the script created for you and fill in the form as shown in the screenshot below. Label the release as "1.0" and click "Create Version".
-    ![Example Image](https://i.imgur.com/vy34PXb.png)
-12. You're done! You can now share the link to your custom media AddOn with others. If you want to update the media, just add more media to the folders and run the bat file again and upload a new release!
+    ![Example Image](https://i.imgur.com/PqnLOF2.png)
+12. You're done! You can now share the link to your custom media AddOn with others or embed it in your UI Pack via the WagoUI Creator Addon. If you want to update the media, just add more media to the folders and run the bat file again and upload a new release with a new version number like "1.1" and a descriptive changelog.

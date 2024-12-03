@@ -1,4 +1,4 @@
-# Shared Media Template
+# SharedMedia Template
 
 This project is a template for creating custom media for WeakAuras and other AddOns that use LibSharedMedia-3.0. The project is set up to create a custom media AddOn that can be uploaded to [Wago Addons](https://addons.wago.io/).
 

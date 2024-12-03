@@ -24,6 +24,7 @@ echo libs\LibSharedMedia-3.0\LibSharedMedia-3.0.lua >> "%tocFile%"
 echo Creating the file...
 echo local LSM = LibStub("LibSharedMedia-3.0") > ..\%folderName%\MyMedia.lua
 
+if not exist "..\%folderName%\background" mkdir "..\%folderName%\background"
 echo    BACKGROUND
 echo.>> ..\%folderName%\MyMedia.lua
 echo -- ----- >> ..\%folderName%\MyMedia.lua
@@ -34,6 +35,7 @@ echo       %%~nF
 echo LSM:Register("background", "%%~nF", [[Interface\Addons\%folderName%\background\%%~nxF]]^) >> ..\%folderName%\MyMedia.lua
 )
 
+if not exist "..\%folderName%\border" mkdir "..\%folderName%\border"
 echo    BORDER
 echo.>> ..\%folderName%\MyMedia.lua
 echo -- ----- >> ..\%folderName%\MyMedia.lua
@@ -44,6 +46,7 @@ echo       %%~nF
 echo LSM:Register("border", "%%~nF", [[Interface\Addons\%folderName%\border\%%~nxF]]^) >> ..\%folderName%\MyMedia.lua
 )
 
+if not exist "..\%folderName%\font" mkdir "..\%folderName%\font"
 echo    FONT
 echo.>> ..\%folderName%\MyMedia.lua
 echo -- ----->> ..\%folderName%\MyMedia.lua
@@ -54,6 +57,7 @@ echo       %%~nF
 echo LSM:Register("font", "%%~nF", [[Interface\Addons\%folderName%\font\%%~nxF]]^) >> ..\%folderName%\MyMedia.lua
 )
 
+if not exist "..\%folderName%\sound" mkdir "..\%folderName%\sound"
 echo    SOUND
 echo.>> ..\%folderName%\MyMedia.lua
 echo -- ----->> ..\%folderName%\MyMedia.lua
@@ -64,6 +68,7 @@ echo       %%~nF
 echo LSM:Register("sound", "%%~nF", [[Interface\Addons\%folderName%\sound\%%~nxF]]^) >> ..\%folderName%\MyMedia.lua
 )
 
+if not exist "..\%folderName%\statusbar" mkdir "..\%folderName%\statusbar"
 echo    STATUSBAR
 echo.>> ..\%folderName%\MyMedia.lua
 echo -- ----->> ..\%folderName%\MyMedia.lua

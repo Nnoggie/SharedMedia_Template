@@ -9,7 +9,7 @@ set "wagoID="
 if exist "%tocFile%" (
   for /F "tokens=2 delims=:" %%A in ('findstr /B /C:"## X-Wago-ID:" "%tocFile%"') do set "wagoID=%%A"
 ) else (
-  set /P "wagoID=Enter Wago Project ID: "
+  set /P "wagoID=Enter Wago Project ID (you can copy and paste it here and press Enter): "
   if not exist "..\%folderName%\background" mkdir "..\%folderName%\background"
   if not exist "..\%folderName%\border" mkdir "..\%folderName%\border"
   if not exist "..\%folderName%\font" mkdir "..\%folderName%\font"

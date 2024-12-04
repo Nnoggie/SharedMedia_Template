@@ -22,12 +22,14 @@ This project is a template and tutorial for creating a custom media Addon for We
 5. Make sure that you can see file extensions in Windows Explorer. If you can't see file extensions, go to View -> Show/hide -> File name extensions.
    ![alt text](https://i.imgur.com/ONjojvE.png)
 6. Navigate into the renamed folder. Rename the file UpdateMedia.txt to UpdateMedia.bat located within. Confirm the file extension change.
+
    ![Example Image](https://i.imgur.com/lfmr7xb.png)
+
 7. Run the file UpdateMedia.bat If Windows blocks the file, click "More info" and then "Run anyway". Follow the steps in the console window. When asked for the Wago ID, enter the ID you got in step 1 and press Enter.
 8. Add your custom media to the appropriate folders that the script created in step 7. You can add textures, sounds, fonts etc.
 9. Run UpdateMedia.bat again to register the files.
-10. The Script has also automatically created a zip file of the Addon for you to distribute. Navigate back to the Wago Addons project you created in step 1 and click "New Release"
+10. The Script has also automatically created a zip file of the Addon for you to distribute. It is located within the directory of your SharedMedia_YourName Addon! Navigate back to the Wago Addons project you created in step 1 and click "New Release"
     ![Example Image](https://i.imgur.com/dnWqihM.png)
 11. Upload the zip file that the script created for you and fill in the form as shown in the screenshot below. Label the release as "1.0" and click "Create Version".
     ![Example Image](https://i.imgur.com/PqnLOF2.png)
-12. You're done! You can now share your custom media AddOn with others or embed it in your UI Pack via the WagoUI Creator Addon. If you want to update the media, just add more media to the folders and run the bat file again and upload a new release with a new version number like "1.1" and a descriptive changelog. Make sure to only upload the generated zip file and not the entire folder.
+12. You're done! You can now share your custom media AddOn with others or embed it in your UI Pack via the WagoUI Creator Addon. If you want to update the media, just add more media to the folders and run the bat file again and upload a new release with the new zip file, a new version number like "1.1" and a descriptive changelog. Make sure to only upload the generated zip file and not the entire folder.

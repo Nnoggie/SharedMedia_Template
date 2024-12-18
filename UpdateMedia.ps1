@@ -53,7 +53,7 @@ else {
 
   # Create the tocFile and add content
   $tocContent = @(
-    "## Interface: 11505, 40401, 110005",
+    "## Interface: 11505, 40401, 110007",
     "## Title: $folderName",
     "## X-Wago-ID: $wagoID",
     "MyMedia.lua",

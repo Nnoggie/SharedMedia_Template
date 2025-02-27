@@ -42,4 +42,4 @@ This project is a template and tutorial for creating a custom media Addon for We
 
    ![Example Image](https://i.imgur.com/PqnLOF2.png)
 
-10. You're done! You can now share your custom media AddOn with others or embed it in your UI Pack via the WagoUI Creator Addon. If you want to update the media, just add more media to the folders and run the bat file again and upload a new release with the new zip file, a new version number like "1.1" and a descriptive changelog. Make sure to only upload the generated zip file and not the entire folder.
+10. You're done! You can now share your custom media AddOn with others or embed it in your UI Pack via the WagoUI Creator Addon. If you want to update the media, just add more media to the folders and run the .ps1 file again and upload a new release with the new zip file, a new version number like "1.1" and a descriptive changelog. Make sure to only upload the generated zip file and not the entire folder.

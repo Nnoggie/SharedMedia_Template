@@ -53,9 +53,20 @@ else {
 
   # Create the tocFile and add content
   $tocContent = @(
-    "## Interface: 11505, 40401, 110007",
+    "## Interface: 11506, 40402, 110100",
     "## Title: $folderName",
     "## X-Wago-ID: $wagoID",
+    "## Category-enUS: Media",
+    "## Category-deDE: Medien",
+    "## Category-esES: Medios",
+    "## Category-esMX: Medios",
+    "## Category-frFR: Médias",
+    "## Category-itIT: Media",
+    "## Category-koKR: 미디어",
+    "## Category-ptBR: Mídia",
+    "## Category-ruRU: Медиа",
+    "## Category-zhCN: 材质",
+    "## Category-zhTW: 材質",
     "MyMedia.lua",
     "libs\LibStub\LibStub.lua",
     "libs\CallbackHandler-1.0\CallbackHandler-1.0.lua",

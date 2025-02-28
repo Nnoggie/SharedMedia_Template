@@ -51,32 +51,32 @@ else {
     }
   }
 
-  # Create the tocFile and add content
-  $tocContent = @(
-    "## Interface: 11506, 40402, 110100",
-    "## Title: $folderName",
-    "## X-Wago-ID: $wagoID",
-    "## Category-enUS: Media",
-    "## Category-deDE: Medien",
-    "## Category-esES: Medios",
-    "## Category-esMX: Medios",
-    "## Category-frFR: Médias",
-    "## Category-itIT: Media",
-    "## Category-koKR: 미디어",
-    "## Category-ptBR: Mídia",
-    "## Category-ruRU: Медиа",
-    "## Category-zhCN: 材质",
-    "## Category-zhTW: 材質",
-    "MyMedia.lua",
-    "libs\LibStub\LibStub.lua",
-    "libs\CallbackHandler-1.0\CallbackHandler-1.0.lua",
-    "libs\LibSharedMedia-3.0\LibSharedMedia-3.0.lua"
-  )
-  $tocContent | Out-File -FilePath $tocFile -Encoding UTF8
-
   Write-Host "AddOn created. Add your media files to the appropriate folders."
   Write-Host "Run this script again to register the media files and create a zip file."
 }
+
+# Create the tocFile and add content
+$tocContent = @(
+  "## Interface: 11506, 40402, 110100",
+  "## Title: $folderName",
+  "## X-Wago-ID: $wagoID",
+  "## Category-enUS: Media",
+  "## Category-deDE: Medien",
+  "## Category-esES: Medios",
+  "## Category-esMX: Medios",
+  "## Category-frFR: Médias",
+  "## Category-itIT: Media",
+  "## Category-koKR: 미디어",
+  "## Category-ptBR: Mídia",
+  "## Category-ruRU: Медиа",
+  "## Category-zhCN: 材质",
+  "## Category-zhTW: 材質",
+  "MyMedia.lua",
+  "libs\LibStub\LibStub.lua",
+  "libs\CallbackHandler-1.0\CallbackHandler-1.0.lua",
+  "libs\LibSharedMedia-3.0\LibSharedMedia-3.0.lua"
+)
+$tocContent | Out-File -FilePath $tocFile -Encoding UTF8
 
 # Create MyMedia.lua file
 $myMediaFile = "..\$folderName\MyMedia.lua"

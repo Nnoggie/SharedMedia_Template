@@ -57,7 +57,7 @@ else {
 
 # Create the tocFile and add content
 $tocContent = @(
-  "## Interface: 110200, 110205, 110200, 50500, 40402, 11507",
+  "## Interface: 120001, 120000, 110200, 110205, 110200, 50500, 40402, 11507",
   "## Title: $folderName",
   "## X-Wago-ID: $wagoID",
   "## Category-enUS: Media",

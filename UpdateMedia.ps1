@@ -57,6 +57,7 @@ else {
 
 # Create the tocFile and add content
 $tocContent = @(
+# WOW_INTERFACE_TARGETS: mainline-beta, mainline-test, mainline, mists, tbc, cata, vanilla
   "## Interface: 120001, 120000, 110200, 110205, 110200, 50500, 40402, 11507",
   "## Title: $folderName",
   "## X-Wago-ID: $wagoID",

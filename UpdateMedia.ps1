@@ -58,7 +58,7 @@ else {
 # Create the tocFile and add content
 $tocContent = @(
 # WOW_INTERFACE_TARGETS: mainline-beta, mainline-test, mainline, mists, tbc, cata, vanilla
-  "## Interface: 120005, 120001, 50503, 40402, 20505, 11508",
+  "## Interface: 120007, 120005, 120001, 50503, 40402, 20505, 11508",
   "## Title: $folderName",
   "## X-Wago-ID: $wagoID",
   "## Category-enUS: Media",
